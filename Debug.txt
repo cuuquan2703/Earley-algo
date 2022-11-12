@@ -1,0 +1,260 @@
+Next term: S
+Predict: {col}0
+Predict: {rule}S
+Predict: Production[NP VP]
+------------------------
+Next term: NP
+Predict: {col}0
+Predict: {rule}NP
+Predict: Production[NP PP, N]
+------------------------
+Next term: NP
+Predict: {col}0
+Predict: {rule}NP
+Predict: Production[NP PP, N]
+------------------------
+Next term: N
+Predict: {col}0
+Predict: {rule}N
+Predict: Production[astronomers, ears, stars, telescope]
+------------------------
+Next term: astronomers
+Scan {token}astronomers
+Scan: {col}1
+Scan: {state}N     -> . astronomers    [0-0]
+-------------------------
+Next term: ears
+Scan {token}ears
+Scan: {col}1
+Scan: {state}N     -> . ears           [0-0]
+-------------------------
+Next term: stars
+Scan {token}stars
+Scan: {col}1
+Scan: {state}N     -> . stars          [0-0]
+-------------------------
+Next term: telescope
+Scan {token}telescope
+Scan: {col}1
+Scan: {state}N     -> . telescope      [0-0]
+-------------------------
+Complete: {col} 1
+Complete: {state} N     -> astronomers .    [0-1]
+Complete: TermN
+Complete: NP->N [0 0]----------------------
+Complete: {col} 1
+Complete: {state} NP    -> N .              [0-1]
+Complete: TermNP
+Complete: S->NP VP [0 0]NP
+Complete: NP->NP PP [0 0]----------------------
+Next term: VP
+Predict: {col}1
+Predict: {rule}VP
+Predict: Production[V NP, VP PP]
+------------------------
+Next term: PP
+Predict: {col}1
+Predict: {rule}PP
+Predict: Production[P NP]
+------------------------
+Next term: V
+Predict: {col}1
+Predict: {rule}V
+Predict: Production[saw]
+------------------------
+Next term: VP
+Predict: {col}1
+Predict: {rule}VP
+Predict: Production[V NP, VP PP]
+------------------------
+Next term: P
+Predict: {col}1
+Predict: {rule}P
+Predict: Production[with]
+------------------------
+Next term: saw
+Scan {token}saw
+Scan: {col}2
+Scan: {state}V     -> . saw            [1-1]
+-------------------------
+Next term: with
+Scan {token}with
+Scan: {col}2
+Scan: {state}P     -> . with           [1-1]
+-------------------------
+Complete: {col} 2
+Complete: {state} V     -> saw .            [1-2]
+Complete: TermV
+Complete: VP->V NP [0 1]----------------------
+Next term: NP
+Predict: {col}2
+Predict: {rule}NP
+Predict: Production[NP PP, N]
+------------------------
+Next term: NP
+Predict: {col}2
+Predict: {rule}NP
+Predict: Production[NP PP, N]
+------------------------
+Next term: N
+Predict: {col}2
+Predict: {rule}N
+Predict: Production[astronomers, ears, stars, telescope]
+------------------------
+Next term: astronomers
+Scan {token}astronomers
+Scan: {col}3
+Scan: {state}N     -> . astronomers    [2-2]
+-------------------------
+Next term: ears
+Scan {token}ears
+Scan: {col}3
+Scan: {state}N     -> . ears           [2-2]
+-------------------------
+Next term: stars
+Scan {token}stars
+Scan: {col}3
+Scan: {state}N     -> . stars          [2-2]
+-------------------------
+Next term: telescope
+Scan {token}telescope
+Scan: {col}3
+Scan: {state}N     -> . telescope      [2-2]
+-------------------------
+Complete: {col} 3
+Complete: {state} N     -> stars .          [2-3]
+Complete: TermN
+Complete: NP->N [0 2]----------------------
+Complete: {col} 3
+Complete: {state} NP    -> N .              [2-3]
+Complete: TermNP
+Complete: VP->V NP [1 1]NP
+Complete: NP->NP PP [0 2]----------------------
+Complete: {col} 3
+Complete: {state} VP    -> V NP .           [1-3]
+Complete: TermVP
+Complete: S->NP VP [1 0]VP
+Complete: VP->VP PP [0 1]----------------------
+Next term: PP
+Predict: {col}3
+Predict: {rule}PP
+Predict: Production[P NP]
+------------------------
+Complete: {col} 3
+Complete: {state} S     -> NP VP .          [0-3]
+Complete: TermS
+Complete: ROOT->S [0 0]----------------------
+Next term: PP
+Predict: {col}3
+Predict: {rule}PP
+Predict: Production[P NP]
+------------------------
+Next term: P
+Predict: {col}3
+Predict: {rule}P
+Predict: Production[with]
+------------------------
+Complete: {col} 3
+Complete: {state} ROOT  -> S .              [0-3]
+Complete: Term----------------------
+Next term: with
+Scan {token}with
+Scan: {col}4
+Scan: {state}P     -> . with           [3-3]
+-------------------------
+Complete: {col} 4
+Complete: {state} P     -> with .           [3-4]
+Complete: TermP
+Complete: PP->P NP [0 3]----------------------
+Next term: NP
+Predict: {col}4
+Predict: {rule}NP
+Predict: Production[NP PP, N]
+------------------------
+Next term: NP
+Predict: {col}4
+Predict: {rule}NP
+Predict: Production[NP PP, N]
+------------------------
+Next term: N
+Predict: {col}4
+Predict: {rule}N
+Predict: Production[astronomers, ears, stars, telescope]
+------------------------
+Next term: astronomers
+Scan {token}astronomers
+Scan: {col}5
+Scan: {state}N     -> . astronomers    [4-4]
+-------------------------
+Next term: ears
+Scan {token}ears
+Scan: {col}5
+Scan: {state}N     -> . ears           [4-4]
+-------------------------
+Next term: stars
+Scan {token}stars
+Scan: {col}5
+Scan: {state}N     -> . stars          [4-4]
+-------------------------
+Next term: telescope
+Scan {token}telescope
+Scan: {col}5
+Scan: {state}N     -> . telescope      [4-4]
+-------------------------
+Complete: {col} 5
+Complete: {state} N     -> ears .           [4-5]
+Complete: TermN
+Complete: NP->N [0 4]----------------------
+Complete: {col} 5
+Complete: {state} NP    -> N .              [4-5]
+Complete: TermNP
+Complete: PP->P NP [1 3]NP
+Complete: NP->NP PP [0 4]----------------------
+Complete: {col} 5
+Complete: {state} PP    -> P NP .           [3-5]
+Complete: TermPP
+Complete: NP->NP PP [1 2]PP
+Complete: VP->VP PP [1 1]----------------------
+Next term: PP
+Predict: {col}5
+Predict: {rule}PP
+Predict: Production[P NP]
+------------------------
+Complete: {col} 5
+Complete: {state} NP    -> NP PP .          [2-5]
+Complete: TermNP
+Complete: VP->V NP [1 1]NP
+Complete: NP->NP PP [0 2]----------------------
+Complete: {col} 5
+Complete: {state} VP    -> VP PP .          [1-5]
+Complete: TermVP
+Complete: S->NP VP [1 0]VP
+Complete: VP->VP PP [0 1]----------------------
+Next term: P
+Predict: {col}5
+Predict: {rule}P
+Predict: Production[with]
+------------------------
+Complete: {col} 5
+Complete: {state} VP    -> V NP .           [1-5]
+Complete: TermVP
+Complete: S->NP VP [1 0]VP
+Complete: VP->VP PP [0 1]----------------------
+Next term: PP
+Predict: {col}5
+Predict: {rule}PP
+Predict: Production[P NP]
+------------------------
+Complete: {col} 5
+Complete: {state} S     -> NP VP .          [0-5]
+Complete: TermS
+Complete: ROOT->S [0 0]----------------------
+Next term: PP
+Predict: {col}5
+Predict: {rule}PP
+Predict: Production[P NP]
+------------------------
+Next term: with
+Complete: {col} 5
+Complete: {state} ROOT  -> S .              [0-5]
+Complete: Term----------------------
